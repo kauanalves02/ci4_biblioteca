@@ -73,7 +73,7 @@ endforeach;
 ?>
 
         <!-- Button Adicionar Autor da Obra -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Form-add">Adicionar... <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#Form-add">Adicionar... <i class="fas fa-plus"></i></button>
     </div>
 </div>
 
@@ -98,7 +98,7 @@ endforeach;
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Lista de Autores</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -112,6 +112,7 @@ endforeach;
                     </div>
                 </div>
                 <div class="modal-footer">
+                <?=anchor("autor/index/","Cancelar", ["class"=>"btn btn-dark"])?>
                     <?= anchor("Obra/index/", "Cancelar", ["class"=>"btn btn-outline-secondary"]) ?>
                     <button type="submit" class="btn bs-dark">Cadastrar</button>
                 </div>

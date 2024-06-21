@@ -1,7 +1,7 @@
 <div class="container">
     <h2>Aluno</h2>
         <!-- Button do Modal -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#Form">
                 Novo
         </button>
         <!-- Tabela de Usuario -->
@@ -43,34 +43,34 @@
         </tbody>
     </table>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1D" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<?=form_open("Aluno/cadastrar")?> 
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
+    
+<!-- Modal -->
+<div class="modal fade" id="Form" tabindex="-1" aria-labelledby="Form" aria-hidden="true">
+    <?=form_open("Aluno/cadastrar")?>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Aluno</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input class='form-control' type="text" id='cpf' name='cpf'>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" name="cpf" type="text" maxlength="14" placeholder="000.000.000-00" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input class='form-control' type="text" id='nome' name='nome'>
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" type="text" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="e-mail">Email:</label>
-                    <input class='form-control' type="text" id='email' name='email'>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input class='form-control' type="text" id='telefone' name='telefone'>
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" maxlength="15" placeholder="(00) 00000-0000" type="text" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="turma">Turma:</label>
+                    <label for="turma">Turma</label>
                     <select class='form-control' name="turma" id="turma">
                         <option value="6A">6A</option>
                         <option value="6B">6B</option>
@@ -85,14 +85,30 @@
                         <option value="9B">9B</option>
                         <option value="9C">9C</option>
                     </select>
-                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-dark">Cadastrar</button>
+                <?=anchor("Aluno/index/", "Cancelar", ["class"=>"btn btn-outline-secondary"])?>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>
         </div>
     </div>
-        <?=form_close()?>
-    </div>
+    <?=form_close()?>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var deleteButtons = document.querySelectorAll('.delete-button');
+    
+    deleteButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            var id = this.getAttribute('data-id');
+            var confirmDelete = confirm("Você tem certeza que deseja deletar o aluno com ID " + id + "?");
+            
+            if (confirmDelete) {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    });
+});
+</script>

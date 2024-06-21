@@ -708,7 +708,7 @@ class BaseComponent extends Config {
  */
 
 const getSelector = element => {
-  let selector = element.getAttribute('data-bs-target');
+  let selector = element.getAttribute('data-target');
   if (!selector || selector === '#') {
     let hrefAttribute = element.getAttribute('href');
 
@@ -906,7 +906,7 @@ const DATA_KEY$9 = 'bs.button';
 const EVENT_KEY$a = `.${DATA_KEY$9}`;
 const DATA_API_KEY$6 = '.data-api';
 const CLASS_NAME_ACTIVE$3 = 'active';
-const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
+const SELECTOR_DATA_TOGGLE$5 = '[data-target="button"]';
 const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
 
 /**
@@ -1476,7 +1476,7 @@ const CLASS_NAME_HORIZONTAL = 'collapse-horizontal';
 const WIDTH = 'width';
 const HEIGHT = 'height';
 const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
-const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="collapse"]';
+const SELECTOR_DATA_TOGGLE$4 = '[data-target="collapse"]';
 const Default$a = {
   parent: null,
   toggle: true
@@ -1715,7 +1715,7 @@ const CLASS_NAME_DROPEND = 'dropend';
 const CLASS_NAME_DROPSTART = 'dropstart';
 const CLASS_NAME_DROPUP_CENTER = 'dropup-center';
 const CLASS_NAME_DROPDOWN_CENTER = 'dropdown-center';
-const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]:not(.disabled):not(:disabled)';
+const SELECTOR_DATA_TOGGLE$3 = '[data-target="dropdown"]:not(.disabled):not(:disabled)';
 const SELECTOR_DATA_TOGGLE_SHOWN = `${SELECTOR_DATA_TOGGLE$3}.${CLASS_NAME_SHOW$6}`;
 const SELECTOR_MENU = '.dropdown-menu';
 const SELECTOR_NAVBAR = '.navbar';
@@ -2402,7 +2402,7 @@ const CLASS_NAME_STATIC = 'modal-static';
 const OPEN_SELECTOR$1 = '.modal.show';
 const SELECTOR_DIALOG = '.modal-dialog';
 const SELECTOR_MODAL_BODY = '.modal-body';
-const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
+const SELECTOR_DATA_TOGGLE$2 = '[data-target="modal"]';
 const Default$6 = {
   backdrop: true,
   focus: true,
@@ -2704,7 +2704,7 @@ const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$3}`;
 const EVENT_RESIZE = `resize${EVENT_KEY$3}`;
 const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$3}${DATA_API_KEY$1}`;
 const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$3}`;
-const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
+const SELECTOR_DATA_TOGGLE$1 = '[data-target="offcanvas"]';
 const Default$5 = {
   backdrop: true,
   keyboard: true,
@@ -4027,9 +4027,9 @@ const NOT_SELECTOR_DROPDOWN_TOGGLE = `:not(${SELECTOR_DROPDOWN_TOGGLE})`;
 const SELECTOR_TAB_PANEL = '.list-group, .nav, [role="tablist"]';
 const SELECTOR_OUTER = '.nav-item, .list-group-item';
 const SELECTOR_INNER = `.nav-link${NOT_SELECTOR_DROPDOWN_TOGGLE}, .list-group-item${NOT_SELECTOR_DROPDOWN_TOGGLE}, [role="tab"]${NOT_SELECTOR_DROPDOWN_TOGGLE}`;
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]'; // TODO: could only be `tab` in v6
+const SELECTOR_DATA_TOGGLE = '[data-target="tab"], [data-target="pill"], [data-target="list"]'; // TODO: could only be `tab` in v6
 const SELECTOR_INNER_ELEM = `${SELECTOR_INNER}, ${SELECTOR_DATA_TOGGLE}`;
-const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`;
+const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-target="tab"], .${CLASS_NAME_ACTIVE}[data-target="pill"], .${CLASS_NAME_ACTIVE}[data-target="list"]`;
 
 /**
  * Class definition

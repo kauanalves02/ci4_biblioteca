@@ -6165,7 +6165,7 @@ textarea.form-control-lg {
   margin-bottom: 1rem;
   margin-left: 15%;
 }
-.carousel-indicators [data-bs-target] {
+.carousel-indicators [data-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
   width: 30px;
@@ -6184,7 +6184,7 @@ textarea.form-control-lg {
   transition: opacity 0.6s ease;
 }
 @media (prefers-reduced-motion: reduce) {
-  .carousel-indicators [data-bs-target] {
+  .carousel-indicators [data-target] {
     transition: none;
   }
 }
@@ -6207,7 +6207,7 @@ textarea.form-control-lg {
 .carousel-dark .carousel-control-next-icon {
   filter: invert(1) grayscale(100);
 }
-.carousel-dark .carousel-indicators [data-bs-target] {
+.carousel-dark .carousel-indicators [data-target] {
   background-color: #000;
 }
 .carousel-dark .carousel-caption {
@@ -6219,7 +6219,7 @@ textarea.form-control-lg {
 [data-bs-theme=dark].carousel .carousel-control-next-icon {
   filter: invert(1) grayscale(100);
 }
-[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
+[data-bs-theme=dark] .carousel .carousel-indicators [data-target], [data-bs-theme=dark].carousel .carousel-indicators [data-target] {
   background-color: #000;
 }
 [data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {

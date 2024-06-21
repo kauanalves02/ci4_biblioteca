@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-secondary-subtle mb-3">
   <div class="container">
-    <?=anchor("Usuario/index","Biblioteca",['class' => 'navbar-brand'])?>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <?=anchor("Home/index","Biblioteca",['class' => 'navbar-brand'])?>
+    <button class="navbar-toggler" type="button" data-target="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,6 +27,10 @@
         <li class="nav-item">
           <?=anchor("Emprestimo/index","Emprestimo",['class' => 'nav-link active', 'aria-current'=>'page',])?>
         </li>
+      </ul>
+      <button class="btn btn-outline-danger pull-left" onclick="location.href='<?php echo base_url('login/logout') ?>'">
+            <i class="fas fa-sign-out-alt"></i> Sair
+          </button>
     </div>
   </div>
 </nav>

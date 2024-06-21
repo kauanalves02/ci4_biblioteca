@@ -37,7 +37,7 @@
     <div class="row p-2">
         <div class="col">
             <div class="btn-group w-100" role="group">
-            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-outline-danger" data-target="modal" data-target="#exampleModal">
                     Excluir
                 </button>
             </div>
@@ -57,12 +57,13 @@
             <div class="modal-content">
         <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       
         </div>
         <div class="modal-body">
             Você tem certeza que deseja excluir: <br>ID: <?=$livro['id']?><br>Disponivel: <?=$livro['disponivel']?><br>Status: <?=$livro['status']?><br> Obra: <?=$livro['id_obra']?>
         </div>
         <div class="modal-footer">
+        <?=anchor("Emprestimo/index/","Cancelar", ["class"=>"btn btn-dark"])?>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>

@@ -1,7 +1,7 @@
 <div class="container">
     <h2>Livro</h2>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
         Novo
     </button>
     <!-- Tabela de Livros -->
@@ -35,12 +35,12 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Livro</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label for="disponivel">Disponível</label>
-                    <input class='form-control' type="text" id='disponivel' name='disponivel'>
+                    <input id="disponivel" name="disponivel" type="number" class="form-control" min="0" required>
                 </div>  
                 <div class="form-group">
                     <label for="status">Status</label>
@@ -48,7 +48,7 @@
                 </div>  
                 <div class="form-group">
                     <label for="telefone">Obra:</label>
-                    <select class='form-select' name="id_obra" id="id_obra" required>
+                    <select class='form-control' name="id_obra" id="id_obra" required>
                         <option>Selecione uma obra</option>
                         <?php foreach($listaObra as $obra) : ?>
                             <option value="<?=$obra['id']?>"><?=$obra['titulo']?></option>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <?=anchor("livro/index/","Cancelar", ["class"=>"btn btn-dark"])?>
                 <button type="submit" class="btn btn-dark">Cadastrar</button>
             </div>
             </div>

@@ -1,7 +1,7 @@
 <div class="container">
     <h2>Obra</h2>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
         Novo
     </button>
     <!-- Tabela de Obras -->
@@ -49,7 +49,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Novo usuário</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -79,7 +79,7 @@
                 </div>         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <?=anchor("obra/index/","Cancelar", ["class"=>"btn btn-dark"])?>
                 <button type="submit" class="btn btn-dark">Cadastrar</button>
             </div>
             </div>

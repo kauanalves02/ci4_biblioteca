@@ -63,7 +63,7 @@
             <div class="btn-group w-100" role="group">
                 <a href='http://localhost:8080/index.php/Aluno/index'class="btn btn-outline-secondary">Cancelar</a>
                 <button type="submit" class="btn btn-outline-success">Salvar</button>
-                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-outline-danger" data-target="modal" data-target="#exampleModal">
                     Excluir
                 </button>
             </div>
@@ -86,7 +86,7 @@
             Você tem certeza que deseja excluir: <br>ID: <?=$aluno['id']?><br>CPF: <?=$aluno['cpf']?><br>Nome: <?=$aluno['nome']?><br>Email: <?=$aluno['email']?><br>Telefone: <?=$aluno['telefone']?><br> Turma: <?=$aluno['turma']?>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <?=anchor("Aluno/index/","Cancelar", ["class"=>"btn btn-dark"])?>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>

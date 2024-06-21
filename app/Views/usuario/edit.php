@@ -3,14 +3,6 @@
     <input value='<?=$usuario['id']?>'class='form-control' type="hidden" id='id' name='id'>
     <div class="row p-2">
         <div class="col-2">
-            <label for="nome">ID</label>
-        </div>
-        <div class="col-10">
-            <input value='<?=$usuario['id']?>'class='form-control' type="text" id='id' name='id' disabled="">
-        </div>
-    </div>
-    <div class="row p-2">
-        <div class="col-2">
             <label for="nome">Nome</label>
         </div>
         <div class="col-10">
@@ -38,7 +30,7 @@
             <div class="btn-group w-100" role="group">
                 <a href='http://localhost:8080/index.php/Usuario/index'class="btn btn-outline-secondary">Cancelar</a>
                 <button type="submit" class="btn btn-outline-success">Salvar</button>
-                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-outline-danger" data-target="modal" data-target="#exampleModal">
                     Excluir
                 </button>
             </div>
@@ -61,7 +53,7 @@
             Você tem certeza que deseja excluir: <br>ID: <?=$usuario['id']?><br>Nome: <?=$usuario['nome']?><br>Email: <?=$usuario['email']?><br>Telefone: <?=$usuario['telefone']?>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>
